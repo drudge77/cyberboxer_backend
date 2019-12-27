@@ -1,0 +1,4 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.pythonPath": "cyberboxer_env/bin/python3.7"
+}

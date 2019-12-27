@@ -38,11 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'module_1.apps.Module1Config',
-    'user_auth.apps.UserAuthConfig'
+    'module_1.apps.Module1Config'
 ]
 
 REST_FRAMEWORK = {
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
@@ -85,8 +87,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cyberboxer',
-        'USER': 'cyberboxer_owner',
-        'PASSWORD': 'cyber@123',
+        'USER': 'praveenkumarpalai',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }
