@@ -28,4 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^user/', include(('users.urls', 'users'), namespace='users')),
+    url(r'^dashboard/organisation', include(('dashboard.routes.organisation', 'dashboard'), namespace='organisation')),
+    url(r'^dashboard/industry', include(('dashboard.routes.industry', 'dashboard'), namespace='industry')),
 ]

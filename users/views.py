@@ -12,6 +12,7 @@ from rest_framework_jwt.utils import jwt_payload_handler
 import jwt
 from django.contrib.auth.signals import user_logged_in
 from rest_framework.permissions import IsAuthenticated
+from dashboard.models import Organisation
 
 class CreateUserAPIView(APIView):
     # Allow any user (authenticated or not) to access this url 
