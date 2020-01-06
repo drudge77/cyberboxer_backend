@@ -24,7 +24,11 @@ class CreateUserAPIView(APIView):
         serializer = UserSerializer(data=user)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response({
+            'type': 'success',
+            'data': serializer.data
+        },
+            status=status.HTTP_201_CREATED)
 
 
 class LoginAPIView(APIView):
@@ -90,7 +94,6 @@ class UserRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
             'data': serializer.data
         },
             status=status.HTTP_200_OK)
-
 
     def put(self, request, *args, **kwargs):
         serializer_data = request.data.get('user', {})
