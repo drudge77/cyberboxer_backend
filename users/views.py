@@ -61,22 +61,22 @@ class LoginAPIView(APIView):
                         res = {
                             'type': 'failed',
                             'message': 'Invalid credentials'}
-                        return Response(res, status=status.HTTP_403_FORBIDDEN)
+                        return Response(res, status=status.HTTP_200_OK)
             except Exception:
                 res = {
                     'type': 'failed',
                     'message': 'Invalid credentials'}
-                return Response(res, status=status.HTTP_403_FORBIDDEN)
+                return Response(res, status=status.HTTP_200_OK)
             else:
                 res = {
                     'type': 'error',
                     'message': 'can not authenticate with the given credentials or the account has been deactivated'}
-                return Response(res, status=status.HTTP_403_FORBIDDEN)
+                return Response(res, status=status.HTTP_200_OK)
         except KeyError:
             res = {
                 'type': 'failed',
                 'message': 'please provide a email and a password'}
-            return Response(res)
+            return Response(res, status=status.HTTP_200_OK)
 
 
 class UserRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
