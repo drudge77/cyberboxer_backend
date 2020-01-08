@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'users.apps.UsersConfig',
     'dashboard.apps.DashboardConfig',
-    'corsheaders'
+    'corsheaders',
+    'import_export',
 ]
 
 REST_FRAMEWORK = {
@@ -91,7 +92,7 @@ WSGI_APPLICATION = 'cyberboxer_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cyberboxernew',
+        'NAME': 'cyberboxer',
         'USER': 'praveenkumarpalai',
         'PASSWORD': '',
         'HOST': 'localhost',
@@ -130,6 +131,8 @@ JWT_AUTH = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 
 # Internationalization

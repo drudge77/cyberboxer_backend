@@ -4,6 +4,7 @@
 from django.db import models
 from django.contrib import admin
 
+
 class Industry(models.Model):
     '''
     This is for managing all te data related to industries.
@@ -23,7 +24,6 @@ class Industry(models.Model):
         return self.name
 
 
-
 class IndustryAdmin(admin.ModelAdmin):
 
     list_display = ['name', 'is_active']
@@ -37,9 +37,7 @@ class IndustryAdmin(admin.ModelAdmin):
         (None, {'fields': ('name',)}),
     )
 
-    search_fields =  ('name',)
+    search_fields = ('name',)
     ordering = ['name']
 
     filter_horizontal = ()
-
- 
