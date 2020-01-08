@@ -7,7 +7,7 @@ from django.contrib import admin
 
 class OrganisationZipcode(models.Model):
     '''
-    This is for managing all te data related to OrgnisationCounties.
+    This is for managing all te data related to OrganisationZipcodes.
     name: the name of the industry
     is_active: tells if entity is active or not
     '''
