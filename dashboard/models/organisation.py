@@ -43,6 +43,8 @@ class Organisation(models.Model):
     def __unicode__(self):
         return self.id
 
+    objects = models.Manager()
+
 
 class OrganisationAdmin(admin.ModelAdmin):
 

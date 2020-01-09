@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 # Mapping controllers to view 
 
-from dashboard.controllers.organisation import CreateOrganisation
+from dashboard.controllers.organisation import CreateOrganisation, OrganisationAPIView
 from dashboard.controllers.industry import CreateIndustry
