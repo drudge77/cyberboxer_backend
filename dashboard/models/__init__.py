@@ -1,3 +1,6 @@
+## __init__ file models
+
+
 from dashboard.models.organisation import *
 from dashboard.models.cs_score import *
 from dashboard.models.industry import *
