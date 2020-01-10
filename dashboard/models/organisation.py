@@ -1,5 +1,3 @@
-
-
 # from __future__ import unicode_literals
 from django.db import models
 from django.contrib import admin
@@ -7,11 +5,11 @@ import sys
 
 
 class Organisation(models.Model):
-    '''
-    This is for managing all te data related to organisations.
+    """
+    This is for managing all the data related to organisations.
     name: the name of the organisation
     is_active: tells if entity is active or not
-    '''
+    """
     id = models.IntegerField(unique=True, primary_key=True)
     k_id = models.CharField(max_length=255, default=None, null=True)
     company_name = models.CharField(max_length=255, default=None, null=True)

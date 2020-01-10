@@ -9,6 +9,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from dashboard.models import Industry
 
+
 class CreateIndustry(APIView):
 
     # Allow only authenticated users to access this url

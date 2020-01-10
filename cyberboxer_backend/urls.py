@@ -17,17 +17,15 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 from django.conf.urls import url, include
-
-
-
+from dashboard.controllers.dashboard import DashboardAPIView
 router = routers.DefaultRouter()
 
-
 urlpatterns = [
-	path('', include(router.urls)),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^user/', include(('users.urls', 'users'), namespace='users')),
     url(r'^dashboard/organisation', include(('dashboard.routes.organisation', 'dashboard'), namespace='organisation')),
     url(r'^dashboard/industry', include(('dashboard.routes.industry', 'dashboard'), namespace='industry')),
+    url(r'^dashboard/dashboard/', DashboardAPIView.as_view(), name='dashboard'),
 ]

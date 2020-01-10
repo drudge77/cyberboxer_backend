@@ -17,6 +17,8 @@ class OrganisationZipcode(models.Model):
     orgs_count = models.IntegerField(default=0, null=True)
     orgs_score = models.CharField(max_length=255, default=True, null=True)
     is_active = models.BooleanField(default=True, null=True)
+    latitude = models.CharField(max_length=255, default=None, null=True)
+    longitude = models.CharField(max_length=255, default=None, null=True)
 
     class Meta:
         verbose_name = 'organisation_zipcode'
